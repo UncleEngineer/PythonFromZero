@@ -1,6 +1,7 @@
 fruit = {'apple':150,
          'durian':300,
-         'orange':50}
+         'orange':50,
+         'mango':40}
 
 menucheck = {'a':'apple','b':'durian','c':'orange'}
 
@@ -32,7 +33,7 @@ while True:
     if menu == '1':
         print(text1)
         while submenu1.lower() != 'q':
-            print('กรุณาเลือกสินค้า\n[A]-แอปเปิ้ล [B]-ส้ม [C] ทุเรียน  หรือ [Q] ออกจากเมนู [T] รวมยอด')
+            print('กรุณาเลือกสินค้า\n[A]-แอปเปิ้ล [B]-ส้ม [C] ทุเรียน  หรือกด[Q] ออกจากเมนู [T] รวมยอด')
             submenu1 = input('สินค้า: ')
             if submenu1.lower() != 'q' and submenu1.lower() != 't':
                 product = menucheck[submenu1.lower()]
@@ -52,7 +53,6 @@ while True:
                 print('กำลังออกจากเมนู...')
                 break
             elif submenu1.lower() == 't':
-                #print('กำลังรวมยอด')
                 grand_total = 0
                 for name,q in allproduct:
                     cal = fruit[name] * q
